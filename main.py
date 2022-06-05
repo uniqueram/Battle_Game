@@ -1,5 +1,3 @@
-from secrets import choice
-from tkinter import BEVEL
 from classes.game import Person, bcolors
 
 
@@ -26,6 +24,12 @@ while running:
                 dmg = player.generate_damage()
                 enemy.take_damage(dmg)
                 print("you attacked for", dmg, "points of damage. Enemy hp is:", enemy.get_hp())
+
+        enemy_choice = 1
+
+        enemy_dmg = enemy.generate_damage()
+        player.take_damage(enemy_dmg)
+        print("Enemy attacks for", enemy_dmg, "Player HP:", player.get_hp())
    
 
 
